@@ -1,51 +1,47 @@
-# Customer Data Management and Analysis Project
+# Customer Data Management and Analysis
 
 ## Overview
-
-This project focuses on building an end-to-end **Customer Data Management System** that integrates:
-- A **Transactional Database** for handling customer orders and interactions.
-- A **Data Warehouse** for reporting and analysis.
-- **Data Visualizations** using Python and Power BI to explore insights.
+This project was developed as part of the Digital Egypt Pioneers Initiative (DEPI) to implement a comprehensive **Customer Data Management System**, integrating database design, data warehousing, and data visualization. The project covers the full lifecycle, from database design to building visualizations using Python and Power BI.
 
 ## Project Phases
+1. **Database Design**:  
+   - Created a relational database with key entities such as **Customers**, **Orders**, **Products**, **Payments**, and **Sellers**.
+   - Designed ERD and implemented stored procedures, views, and indexes for optimizing performance.
 
-### 1. **Database Design**
-- **Technologies**: SQL Server, SSMS
-- Created an **Entity-Relationship Diagram (ERD)** for the main database tables: Customers, Transactions, Orders, Products, Sellers, and more.
-- Implemented **stored procedures**, **views**, and **indexes** to optimize performance.
+2. **Data Warehouse Schema**:  
+   - Implemented a **Star Schema** for efficient querying and reporting.
+   - Fact table: **FactOrders**  
+   - Dimension tables: **DimCustomer**, **DimProduct**, **DimSeller**, **DimShippingMethod**, **DimPayment**, and **DimDate**.
 
-### 2. **Data Warehouse Schema**
-- **Schema**: We implemented a **Star Schema** to support reporting.
-  - **Fact Table**: FactOrders (stores key measures like quantity, total amount)
-  - **Dimension Tables**: DimCustomer, DimProduct, DimSeller, DimDate, etc.
-- **ETL Process**: SQL Server Integration Services (SSIS) was used to extract, transform, and load data from the transactional database into the Data Warehouse.
+3. **ETL Process**:  
+   - Extracted data from the transactional database, transformed it, and loaded it into the data warehouse using **SQL Server Integration Services (SSIS)**.
 
-### 3. **Python Visualizations**
-- **Tools**: Python, Pandas, Matplotlib, Seaborn
-- Created insights like:
-  - Top 10 Customers by Total Amount Spent
-  - Top 5 Products by Number of Transactions
+4. **Visualizations**:  
+   - Created data visualizations using **Python** for detailed data analysis.
+   - Designed interactive **Power BI dashboards** to provide insights into sales, customer behavior, and product performance.
 
-### 4. **Power BI Visualizations**
-- **Tools**: Power BI
-- Developed dynamic dashboards showing:
-  - Total Sales
-  - Average Seller Salary
-  - Number of Orders and Sales by Category
-  - Orders by Salesperson
+## Technologies Used
+- **SQL Server** for database and data warehouse implementation.
+- **SSIS** for ETL processes.
+- **Python** for data analysis and visualization.
+- **Power BI** for business intelligence dashboards.
 
-## Installation and Usage
-
-1. **SQL Database**: Set up the original database schema using the provided SQL scripts.
-2. **ETL Process**: Use SSIS for the ETL process. Refer to the `ETL_SSIS_Package.dtsx` for the package details.
-3. **Python Visualizations**: Install necessary Python libraries (`requirements.txt`), and run the Jupyter notebooks for the analysis.
-4. **Power BI Dashboards**: Open the `.pbix` file to view interactive dashboards.
+## Visualizations
+- **Python**: 
+  - Top 10 customers by total amount spent.
+  - Top 5 products by the number of transactions.
+- **Power BI**: 
+  - Dashboards showing total sales, average seller salary, sales by category, orders by salesperson, etc.
 
 ## Team Members
 - Abdelrahman Maged
-- Ahmed AbdElmohaimen
-- Alaa Mahdy
 - Mariem Ehab
 - Roqia Nabil
+- Ahmed AbdElmohaimen
+- Alaa Mahdy
 - Ali Shaaban
 
+## Conclusion
+We successfully created an integrated customer data management solution, from database design to visualization, providing valuable business insights through data reporting and analysis.
+
+---
